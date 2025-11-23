@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-slate-900 text-white overflow-x-hidden;
+  font-family: 'Poppins','sans-serif';
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #0f172a; }
+::-webkit-scrollbar-thumb { background: #38bdf8; border-radius: 5px; }
+
+/* Grid Background Pattern */
+.bg-grid {
+  background-size: 40px 40px;
+  background-image: linear-gradient(to right, rgba(56, 189, 248, 0.05) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(56, 189, 248, 0.05) 1px, transparent 1px);
+}
+
+/* Text Glow */
+.glow-text {
+  text-shadow: 0 0 20px rgba(56, 189, 248, 0.5);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+::-webkit-scrollbar-thumb {
+  background: #38bdf8;
+  border-radius: 5px;
+}
+/* Add this to the bottom of src/index.css */
+.glow-text {
+  text-shadow: 0 0 20px rgba(56, 189, 248, 0.5);
+}
+
+.blob {
+  position: absolute;
+  filter: blur(80px);
+  z-index: -1;
+  opacity: 0.6;
+  animation: float 10s infinite ease-in-out;
+}
+
+@keyframes float {
+  0% { transform: translate(0px, 0px) scale(1); }
+  33% { transform: translate(30px, -50px) scale(1.1); }
+  66% { transform: translate(-20px, 20px) scale(0.9); }
+  100% { transform: translate(0px, 0px) scale(1); }
+}
+
+/* ... your existing CSS ... */
+
+/* --- Bubble Animations --- */
+.bubble-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0; /* Behind everything */
+    top: 0;
+    left: 0;
+    pointer-events: none; /* Ensure clicks go through them */
+}
+
+.bubble {
+    position: absolute;
+    bottom: -100px;
+    background: radial-gradient(circle, rgba(56,189,248,0.3) 0%, rgba(56,189,248,0) 70%); /* Cyan glow */
+    border-radius: 50%;
+    opacity: 0.5;
+    animation: rise infinite ease-in;
+}
+
+/* Different sizes and speeds for variety */
+.b1 { width: 40px; height: 40px; left: 10%; animation-duration: 8s; animation-delay: 0s; }
+.b2 { width: 60px; height: 60px; left: 20%; animation-duration: 10s; animation-delay: 2s; }
+.b3 { width: 30px; height: 30px; left: 35%; animation-duration: 7s; animation-delay: 4s; }
+.b4 { width: 80px; height: 80px; left: 50%; animation-duration: 12s; animation-delay: 1s; }
+.b5 { width: 40px; height: 40px; left: 65%; animation-duration: 9s; animation-delay: 3s; }
+.b6 { width: 55px; height: 55px; left: 80%; animation-duration: 11s; animation-delay: 5s; }
+.b7 { width: 35px; height: 35px; left: 90%; animation-duration: 8s; animation-delay: 6s; }
+
+@keyframes rise {
+    0% {
+        bottom: -100px;
+        transform: translateX(0);
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.6;
+        transform: translateX(20px);
+    }
+    100% {
+        bottom: 1080px; /* Move above the screen */
+        transform: translateX(-20px);
+        opacity: 0;
+    }
+}
+/* ... existing css ... */
+
+/* The Grid Pattern */
+.bg-grid {
+  background-size: 50px 50px;
+  background-image: radial-gradient(circle, #38bdf8 1px, transparent 1px); 
+  opacity: 0.2;
+}
