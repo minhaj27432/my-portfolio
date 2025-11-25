@@ -8,12 +8,11 @@ const Contact = () => {
   const [statusMessage, setStatusMessage] = useState(null);
 
   // --- YOUR FORMSPREE ID ---
-  // This is the ID you provided: xrbddjlo
   const formId = "xrbddjlo"; 
 
   // --- FORM SUBMIT HANDLER ---
   const handleSubmit = async (e) => {
-    e.preventDefault(); // Prevents page reload
+    e.preventDefault(); 
     setIsSubmitting(true);
     setStatusMessage(null);
 
@@ -30,7 +29,7 @@ const Contact = () => {
 
       if (response.ok) {
         setStatusMessage("success");
-        e.target.reset(); // Clear the form inputs
+        e.target.reset(); 
       } else {
         const data = await response.json();
         if (Object.hasOwn(data, 'errors')) {
@@ -54,7 +53,7 @@ const Contact = () => {
       <div className="absolute inset-0 bg-grid z-0 opacity-20"></div>
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-cyan-500/10 rounded-full blur-[100px] -z-10"></div>
 
-      <div className="max-w-screen-xl mx-auto p-4 flex flex-col justify-center w-full h-full relative z-10">
+      <div className="max-w-screen-xl mx-auto px-6 md:px-12 flex flex-col justify-center w-full h-full relative z-10">
         
         {/* Header */}
         <div className="pb-8 text-center md:text-left">
@@ -69,7 +68,7 @@ const Contact = () => {
             initial={{ x: -50, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.8 }}
-            className="flex flex-col justify-center space-y-8"
+            className="flex flex-col justify-start space-y-8"
           >
             <div>
                 <h3 className="text-3xl font-bold text-white mb-2">Let's connect!</h3>
@@ -101,7 +100,7 @@ const Contact = () => {
             initial={{ x: 50, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.8 }}
-            className="bg-slate-800/30 backdrop-blur-md p-8 rounded-2xl border border-slate-700 shadow-xl"
+            className="bg-slate-800/30 backdrop-blur-md p-6 sm:p-8 rounded-2xl border border-slate-700 shadow-xl"
           >
             <form onSubmit={handleSubmit} className="flex flex-col gap-4">
               
@@ -119,17 +118,17 @@ const Contact = () => {
 
               <div className="flex flex-col">
                   <label className="text-gray-400 text-sm mb-2">Name</label>
-                  <input type="text" name="name" placeholder="Enter your name" required className="p-3 bg-slate-900 border border-slate-700 rounded-lg text-white focus:border-cyan-500 transition-all" />
+                  <input type="text" name="name" placeholder="Enter your name" required className="p-3 bg-slate-900 border border-slate-700 rounded-lg text-white focus:border-cyan-500 transition-all outline-none" />
               </div>
 
               <div className="flex flex-col">
                   <label className="text-gray-400 text-sm mb-2">Email</label>
-                  <input type="email" name="email" placeholder="Enter your email" required className="p-3 bg-slate-900 border border-slate-700 rounded-lg text-white focus:border-cyan-500 transition-all" />
+                  <input type="email" name="email" placeholder="Enter your email" required className="p-3 bg-slate-900 border border-slate-700 rounded-lg text-white focus:border-cyan-500 transition-all outline-none" />
               </div>
 
               <div className="flex flex-col">
                   <label className="text-gray-400 text-sm mb-2">Message</label>
-                  <textarea name="message" rows="6" placeholder="Enter your message" required className="p-3 bg-slate-900 border border-slate-700 rounded-lg text-white focus:border-cyan-500 transition-all resize-none"></textarea>
+                  <textarea name="message" rows="6" placeholder="Enter your message" required className="p-3 bg-slate-900 border border-slate-700 rounded-lg text-white focus:border-cyan-500 transition-all resize-none outline-none"></textarea>
               </div>
 
               <button 

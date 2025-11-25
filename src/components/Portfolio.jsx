@@ -4,7 +4,6 @@ import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 
 const Portfolio = () => {
 
-  // Data: Update these with your real project details
   const projects = [
     {
       id: 1,
@@ -71,12 +70,12 @@ const Portfolio = () => {
   };
 
   return (
-    <div name="portfolio" className="w-full min-h-screen bg-slate-900 py-10 relative">
+    <div name="portfolio" className="w-full min-h-screen bg-slate-900 py-20 relative">
       
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-grid z-0 opacity-20"></div>
 
-      <div className="max-w-screen-xl p-4 mx-auto flex flex-col justify-center w-full h-full relative z-10">
+      <div className="max-w-screen-xl px-6 md:px-12 mx-auto flex flex-col justify-center w-full h-full relative z-10">
         
         {/* Header */}
         <div className="pb-12 text-center md:text-left">
@@ -90,7 +89,7 @@ const Portfolio = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10 px-6 sm:px-0"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           {projects.map(({ id, src, title, tech, demoLink, codeLink }) => (
             <motion.div 
