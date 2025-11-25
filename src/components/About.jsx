@@ -29,7 +29,7 @@ const About = () => {
   ];
 
   return (
-    <div name="about" className="w-full bg-slate-900 text-white py-16 md:py-20">
+    <div name="about" className="w-full min-h-screen bg-slate-900 text-white py-20">
       <div className="max-w-screen-xl px-6 md:px-12 mx-auto flex flex-col justify-center w-full h-full">
         
         {/* Section Title */}
