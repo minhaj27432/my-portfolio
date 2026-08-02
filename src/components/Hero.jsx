@@ -5,7 +5,8 @@ import { Link } from "react-scroll";
 import { HiArrowNarrowRight, HiDownload } from "react-icons/hi";
 import { FaGithub, FaLinkedin, FaFacebook, FaInstagram } from "react-icons/fa";
 import { FaPhp, FaJava, FaPython, FaReact, FaLaravel } from "react-icons/fa";
-import { SiDotnet, SiJavascript, SiHtml5, SiCss3 } from "react-icons/si";
+import { SiDotnet, SiJavascript, SiHtml5 } from "react-icons/si";
+import { FaCss3Alt } from "react-icons/fa";
 import { RiFlashlightFill } from "react-icons/ri";
 import profileImg from "../assets/profile/minhaj.png";
 import cvFile from "../assets/cv/Minhaj_Mohammed_CV.pdf";
@@ -194,7 +195,7 @@ const Hero = () => {
       <div className="w-full bg-slate-900/80 backdrop-blur-md border-t border-slate-800 py-4 z-10">
         <div className="max-w-screen-xl mx-auto px-6 flex flex-wrap justify-center gap-6 sm:gap-8 text-gray-500">
           <div className="hover:text-orange-500 transition-colors duration-300 cursor-pointer"><SiHtml5 size={25} /></div>
-          <div className="hover:text-blue-500 transition-colors duration-300 cursor-pointer"><SiCss3 size={25} /></div>
+          <div className="hover:text-blue-500 transition-colors duration-300 cursor-pointer"><FaCss3Alt size={25} /></div>
           <div className="hover:text-yellow-400 transition-colors duration-300 cursor-pointer"><SiJavascript size={25} /></div>
           <div className="hover:text-purple-400 transition-colors duration-300 cursor-pointer"><FaPhp size={25} /></div>
           <div className="hover:text-red-600 transition-colors duration-300 cursor-pointer"><FaLaravel size={25} /></div>
